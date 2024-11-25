@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: slideInHeader 1s ease-out;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #005bb5;
+    transform: scale(1.1);
+}
+
+section {
+    padding: 50px 0;
+    flex-grow: 1;
+    animation: fadeInSection 1s ease-out;
+}
+
+.bg-light {
+    background-color: #f9f9f9;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInText 1.5s forwards ease-out;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInText 2s forwards ease-out;
+}
+
+ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.service {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInService 1s ease-out forwards;
+}
+
+.service:hover {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: auto;
+    font-size: 1rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-out forwards; /* Добавлено 'forwards' для сохранения конечного состояния */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSection {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInText {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInHeader {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInService {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
